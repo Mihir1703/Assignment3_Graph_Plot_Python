@@ -1,6 +1,5 @@
 from matplotlib import pyplot as p
 plot = []
-import sys
 
 with open('output.txt','r+') as f:
     data = f.read()
@@ -14,7 +13,7 @@ with open('output.txt','r+') as f:
 
 p.plot(plot[0],plot[1],label="binary search")
 p.plot(plot[0],plot[2],label="ternary search")
-p.xlabel('Search value')
+p.xlabel(f'Search value (input size : {len(plot[0])})')
 p.ylabel('Comparison count')
 p.legend()
 p.grid()
